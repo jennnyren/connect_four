@@ -1,0 +1,16 @@
+How to make the computer clever:
+The idea is to simulate a "would-win" move: the computer scans all columns for potential threats where the human could win with their next move, and prioritizes blocking those threats. If no blocking is needed, it picks a random column.
+
+Am I able to accomplish this:
+Yes.
+Is the computer smart enough:
+No. The computer only focuses on blocking the human player, without trying to win itself.
+
+About the algorithm:
+Select a temporary available cell on the game board, and check if this cell can form a 4-circle win for the human player, and undo the move. If the cell can help the human player win, return True, otherwise, return False.
+
+How often the computer beats the human player:
+Around 70% of the time
+
+Possible improvement:
+Aside from blocking human players, the improvement lies in that the computer should try to win itself, in other words, if no blocking moves are there, it should prioritise a step that helps itself connect 4 circles.
